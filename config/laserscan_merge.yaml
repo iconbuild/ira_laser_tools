@@ -3,7 +3,7 @@ laserscan_multi_merger:
     destination_frame: "base_link"
     cloud_destination_topic: "/merged_cloud"
     scan_destination_topic: "/merged_scan"
-    laserscan_topics: "/rplidar_scan /velodyne_scan"
+    laserscan_topics: "/rplidar/filtered_scan /velodyne/filtered_scan"
     angle_min: -180.0
     angle_max: 180.0
     angle_increment: 0.00437
