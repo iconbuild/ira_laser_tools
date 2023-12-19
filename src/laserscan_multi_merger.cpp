@@ -280,6 +280,7 @@ void LaserscanMerger::pointcloud_to_laserscan(Eigen::MatrixXf points, pcl::PCLPo
 {
 	sensor_msgs::msg::LaserScan output;
 	output.header = pcl_conversions::fromPCL(merged_cloud->header);
+	output.header.stamp = this->now()+rclcpp::Duration::from_seconds(0.5);
 	output.angle_min = this->angle_min;
 	output.angle_max = this->angle_max;
 	output.angle_increment = this->angle_increment;
